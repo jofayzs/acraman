@@ -1,0 +1,4 @@
+nominal_ppb,realized_ppb,spherules,required_zaps_stable_exact,first_crossing_exact,pct_of_slide,machine_hours,cost_usd,verdict,verdict_trigger,sim_stable_informational,sim_first_crossing_informational,overlay_check_passed,max_gap_se,max_gap_pct_points
+1.0,0.999967013,2122,6667,6334,3.14,444.5,44447,Costly,444 machine hours is between the 100 h and 500 h limits,6667,6334,True,2.87,1.38
+0.5,0.499983507,1061,12834,12168,6.05,855.6,85560,Infeasible,856 machine hours exceeds the 500 h limit,12834,12168,True,2.62,1.31
+0.001,0.000942475979,2,201318,201318,94.87,13421.2,1342120,Infeasible,"13,421 machine hours exceeds the 500 h limit and 94.9% of the slide exceeds the 50% limit",201225,201225,True,2.56,0.83

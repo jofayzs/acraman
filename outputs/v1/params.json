@@ -1,0 +1,49 @@
+{
+  "config_file": "config/v1_default.toml",
+  "parameters": {
+    "slide_width_cm": 3.0,
+    "slide_height_cm": 2.0,
+    "spot_diameter_um": 60.0,
+    "grade_ppb": 100.0,
+    "hit_threshold_ppb": 100.0,
+    "concentrations_ppb": [
+      1.0,
+      0.5,
+      0.001
+    ],
+    "band_low": 0.8,
+    "band_high": 1.2,
+    "confidence": 0.9,
+    "zaps_per_hour": 15.0,
+    "usd_per_hour": 100.0,
+    "feasible_max_hours": 100.0,
+    "infeasible_min_hours": 500.0,
+    "infeasible_slide_fraction": 0.5,
+    "runs": 10000,
+    "seed": 20261111,
+    "trajectories": 20,
+    "k_se": 5.0,
+    "log_points": 200,
+    "window_fraction": 0.1
+  },
+  "derived": {
+    "total_cells": 212207,
+    "spherules": {
+      "1.0": 2122,
+      "0.5": 1061,
+      "0.001": 2
+    },
+    "realized_ppb": {
+      "1.0": 0.9999670133407474,
+      "0.5": 0.4999835066703737,
+      "0.001": 0.0009424759786434943
+    }
+  },
+  "versions": {
+    "python": "3.12.16",
+    "acraman": "0.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  }
+}

@@ -1,0 +1,41 @@
+# Acraman Ir zap simulator, v1 defaults.
+# Copy this file, edit the copy, and run:  uv run acraman-sim --config my_variant.toml --out outputs/my_variant
+
+[slide]
+width_cm = 3.0
+height_cm = 2.0
+spot_diameter_um = 60.0        # laser spot; the slide is treated as a grid of spot-sized cells
+
+[spherules]
+grade_ppb = 100.0              # Ir concentration of every spherule cell; all other cells are 0 ppb
+
+[measurement]
+hit_threshold_ppb = 100.0      # a zap counts as Ir if it reads >= this (must not exceed grade_ppb)
+
+[target]
+concentrations_ppb = [1.0, 0.5, 0.001]   # nominal bulk concentrations to test (0.001 ppb = 1 ppt)
+
+[success]
+band_low = 0.8                 # a run succeeds at n zaps if band_low <= estimate / true <= band_high
+band_high = 1.2
+confidence = 0.90              # fraction of runs that must succeed
+
+[cost]
+zaps_per_hour = 15.0
+usd_per_hour = 100.0
+
+[feasibility]
+# PLACEHOLDER limits pending a real budget / instrument allocation from the team.
+feasible_max_hours = 100.0         # at or below: Feasible
+infeasible_min_hours = 500.0       # above: Infeasible (between the two: Costly)
+infeasible_slide_fraction = 0.5    # above this fraction of the slide: Infeasible
+
+[simulation]
+runs = 10000
+seed = 20261111
+trajectories = 20              # individual runs drawn in each figure
+
+[validation]
+k_se = 5.0                     # fail if |simulated - exact| > k_se standard errors at any checked n
+log_points = 200               # log-spaced n values checked across the whole slide
+window_fraction = 0.10         # plus every n within +/- this fraction of first crossing and stable n
